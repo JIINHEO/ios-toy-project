@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AF157951-1A4E-4423-BD6C-4A37860A4BC8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34004813-EF06-41C0-8649-8536ADD59243"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFriends/Friend.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fullAddress"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "34004813-EF06-41C0-8649-8536ADD59243 - aa2f711b4b71bd47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyFriends.Friend.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;MyFriends.Friend.CodingKeys&gt;"
+                  moduleName = "MyFriends"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heojiin/Desktop/MyFriends/MyFriends/Friend.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "167">
+               </Location>
+               <Location
+                  uuid = "34004813-EF06-41C0-8649-8536ADD59243 - e9dd5813ba41d5c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyFriends.Friend.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "MyFriends"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heojiin/Desktop/MyFriends/MyFriends/Friend.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

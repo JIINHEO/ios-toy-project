@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     // Request.swift에서 보낼때 백그라운드에서 동작해서
-    // 받는것 또한 백그라운드에서 동작함 그래서 메인 스레드로 가져와서 호출해줘야한다. 
+    // 받는것 또한 백그라운드에서 동작함 그래서 메인 스레드로 가져와서 호출해줘야한다.
     @objc func didReciveFriendsNotification(_ noti: Notification){
         
         guard let friends: [Friend] = noti.userInfo?["friends"] as? [Friend] else { return }

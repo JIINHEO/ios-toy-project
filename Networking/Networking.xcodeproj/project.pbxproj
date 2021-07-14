@@ -16,6 +16,7 @@
 		E841DBB7269DC53C0015284B /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841DBB6269DC53C0015284B /* NetworkingTests.swift */; };
 		E841DBC2269DC53C0015284B /* NetworkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841DBC1269DC53C0015284B /* NetworkingUITests.swift */; };
 		E841DBD0269DC6610015284B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841DBCF269DC6610015284B /* Model.swift */; };
+		E841DBD2269F1D880015284B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841DBD1269F1D880015284B /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E841DBC1269DC53C0015284B /* NetworkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingUITests.swift; sourceTree = "<group>"; };
 		E841DBC3269DC53C0015284B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E841DBCF269DC6610015284B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E841DBD1269F1D880015284B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		E841DB93269DC53A0015284B = {
 			isa = PBXGroup;
 			children = (
+				E841DBD1269F1D880015284B /* Request.swift */,
 				E841DB9E269DC53A0015284B /* Networking */,
 				E841DBB5269DC53C0015284B /* NetworkingTests */,
 				E841DBC0269DC53C0015284B /* NetworkingUITests */,
@@ -263,6 +266,7 @@
 			files = (
 				E841DBA4269DC53A0015284B /* ViewController.swift in Sources */,
 				E841DBA0269DC53A0015284B /* AppDelegate.swift in Sources */,
+				E841DBD2269F1D880015284B /* Request.swift in Sources */,
 				E841DBA2269DC53A0015284B /* SceneDelegate.swift in Sources */,
 				E841DBD0269DC6610015284B /* Model.swift in Sources */,
 			);

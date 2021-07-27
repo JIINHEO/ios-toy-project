@@ -20,6 +20,8 @@ struct Friend: Codable {
         var full: String {
             return self.title.capitalized + ". " + self.first.capitalized + " " + self.last.capitalized
         }
+        
+
     }
     
     struct Picture: Codable {

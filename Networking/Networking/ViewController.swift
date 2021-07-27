@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     var friends: [Friend] = []
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for : indexPath)
         
         let friend: Friend = self.friends[indexPath.row]

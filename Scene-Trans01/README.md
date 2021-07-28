@@ -2,8 +2,6 @@
 
 <img width= "30%" src="https://user-images.githubusercontent.com/39071796/127272087-94c83308-5f86-472d-9dac-c0579f67bee2.gif"/>
 
-
-
 <br>
 <br>
 <br>

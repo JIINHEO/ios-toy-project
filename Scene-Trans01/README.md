@@ -1,5 +1,4 @@
-# Scene-Trans01
-
+#  화면 전환 : 뷰 컨트롤러 직접 호출에 의한 화면 전환
 
 <img width= "30%" src="https://user-images.githubusercontent.com/39071796/127272087-94c83308-5f86-472d-9dac-c0579f67bee2.gif"/>
 
@@ -7,7 +6,7 @@
 
 <br>
 
-## 화면 전환 : 뷰 컨트롤러 직접 호출에 의한 화면 전환
+
 * ### 화면 전환
 ``` 
 present(<새로운 뷰 컨트롤러 인스턴트>,animated:<애니메이셔 여부>, completion: <클로저나 함수 : 화면 전환이 완전히 끝난 후에 호출>)

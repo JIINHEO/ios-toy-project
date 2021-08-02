@@ -35,32 +35,33 @@ class FormViewController: UIViewController {
         /*
          AppDelegate는 앱 전체를 통틀어 하나의 인스턴스만 존재하도록 iOS 시스템에 의해 보장. -> Singleton
          때문에 AppDelegate 클래스의 인스턴스는 직접 생성할 수 없으며, 아래와 같이 생성되어 있는 인스턴스를 참조해야 함
-         */
+        
         let ad = UIApplication.shared.delegate as? AppDelegate
         
         ad?.paramEmail = self.email.text
         ad?.paramUpdate = self.isUpdate.isOn
         ad?.paramInterval = self.interval.value
 
+         */
         
+        // UserDefault 객체의 인스턴스를 가져온다
+        let ud = UserDefaults.standard
+        
+        // 값을 저장한다.
+        ud.set(self.email.text, forKey: "email")
+        ud.set(self.isUpdate.isOn, forKey: "isUpdate")
+        ud.set(self.interval.value, forKey: "interval")
+        
+        // 이전 화면으로 복귀한다.
         self.presentingViewController?.dismiss(animated: true)
-        
     }
-    
+        
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -49,11 +49,13 @@ VC2 -> VC1 로 화면이 전환되었을때 viewWillAppear의 호출과 값의 �
 
 iOS 13부터 ```Modal presentation Style```의 디폴트 값이 full screen이 아닌 ```automatic``` 으로 변경되면서 라이프 사이클도 변경되었다.  
 
-* 기존 fullscreen style 라이프 스타일    
+* 기존 fullscreen style 라이프 사이클    
 dismiss -> VC2 종료 -> VC1의 viewWillAppear, viewDidAppear을 호출
 
 * 변경된 sheet style 모달 라이프 사이클   
 VC1에 전혀 영향을 주지 않고 앞에 독립적으로 띄워짐 -> dismiss -> VC2 종료
 
+<img width="260" alt="image" src="https://user-images.githubusercontent.com/39071796/127892742-cb0c2b34-7725-4f26-99db-ea146755f870.png">
+Presentation 스타일은 Full screen 으로 변경
 
 ```애초에 <임시로> 모달을 띄운 형태인데 VC1메소드에서 뭔가를 해야하는것은 바람직하지 않은것 같다.```

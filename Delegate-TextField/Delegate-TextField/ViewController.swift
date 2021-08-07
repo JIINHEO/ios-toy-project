@@ -19,6 +19,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.tf.resignFirstResponder()
     }
     
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("텍스트 필드의 편집이 시작됩니다.")
+        return true // false를 리턴하면 편집되지 않는다.
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("텍스트 필드의 편집이 시작되었습니다.")
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("텍스트의 내용이 삭제될 때 호출")
+        return true // false 를 리턴하면 삭제되지 않는다.
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("텍스트 필드의 내용이 \(string)으로 변경됩니다.")
+        if Int(string) == nil { // 입력된 값이 숫자가 아니라면 true를 리턴
+            // 현재 텍스트 필드에 입력된 길이와 더해질 문자열 길이의 합이 10을 넘는다면 반영하지 않음
+            if(textField.text?.count)! + string.count > 10 {
+                return false
+            } else {
+                return true
+            }
+        } else { // 입력된 값이 숫자라면 false를 리턴
+            return false
+        }
+    }
+    
+    // 텍스트 필드의 리턴키가 눌러졌을 때 호출
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print("텍스트 필드의 리턴키가 눌러졌습니다.")
+        return true
+    }
+    
+    // 텍스트 필드 편집이 종료될 때 호출
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("텍스트 필드의 편집이 종료됩니다.")
+        return true // false를 리턴하면 편집이 종료되지 않는다.
+    }
+    
+    // 텍스트 필드의 편집이 종료되었을 때 호출
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("텍스트 필드의 편집이 종료되었습니다.")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -18,6 +18,8 @@
 		E898F0C726CBD2BF00DC9D12 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E898F0C626CBD2BF00DC9D12 /* ListViewController.swift */; };
 		E8D1671B26D51D8100A5A77D /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1671A26D51D8100A5A77D /* MovieVO.swift */; };
 		E8D1671D26D6682700A5A77D /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1671C26D6682600A5A77D /* MovieCell.swift */; };
+		E8D1672526D6785800A5A77D /* dc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8D1672326D6785800A5A77D /* dc.jpg */; };
+		E8D1672626D6785800A5A77D /* dy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8D1672426D6785800A5A77D /* dy.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E898F0C626CBD2BF00DC9D12 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E8D1671A26D51D8100A5A77D /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 		E8D1671C26D6682600A5A77D /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		E8D1672326D6785800A5A77D /* dc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dc.jpg; sourceTree = "<group>"; };
+		E8D1672426D6785800A5A77D /* dy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dy.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		E898F09526C0AA9000DC9D12 /* MyMovieChart */ = {
 			isa = PBXGroup;
 			children = (
+				E8D1671E26D672AE00A5A77D /* Resources */,
 				E898F09626C0AA9000DC9D12 /* AppDelegate.swift */,
 				E898F09826C0AA9000DC9D12 /* SceneDelegate.swift */,
 				E898F09A26C0AA9000DC9D12 /* ViewController.swift */,
@@ -135,6 +140,15 @@
 				E898F0BA26C0AA9100DC9D12 /* Info.plist */,
 			);
 			path = MyMovieChartUITests;
+			sourceTree = "<group>";
+		};
+		E8D1671E26D672AE00A5A77D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8D1672326D6785800A5A77D /* dc.jpg */,
+				E8D1672426D6785800A5A77D /* dy.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +254,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D1672626D6785800A5A77D /* dy.jpg in Resources */,
+				E8D1672526D6785800A5A77D /* dc.jpg in Resources */,
 				E898F0A326C0AA9100DC9D12 /* LaunchScreen.storyboard in Resources */,
 				E898F0A026C0AA9100DC9D12 /* Assets.xcassets in Resources */,
 				E898F09E26C0AA9000DC9D12 /* Main.storyboard in Resources */,

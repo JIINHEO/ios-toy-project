@@ -8,7 +8,7 @@
 import UIKit
 
 class SeguePresentViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,5 +17,6 @@ class SeguePresentViewController: UIViewController {
     
     @IBAction func tapBackButton(_ sender: UIButton) {
         self.navigationController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }

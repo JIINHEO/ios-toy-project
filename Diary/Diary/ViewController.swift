@@ -80,6 +80,7 @@ extension ViewController: UICollectionViewDataSource{
         let diary = self.diaryList[indexPath.row]
         cell.titleLabel.text = diary.title
         cell.dateLabel.text = self.dateToString(date: diary.date)
+        cell.contentView.isUserInteractionEnabled = false
         return cell
     }
 }

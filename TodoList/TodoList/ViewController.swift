@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     @objc func doneButtonTap() {
         self.navigationItem.leftBarButtonItem = self.editButton
         self.tableView.setEditing(false, animated:true)
-
     }
     
     

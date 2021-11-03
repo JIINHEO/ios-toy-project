@@ -110,7 +110,7 @@
         <!--일기 작성-->
         <scene sceneID="CGR-GB-qiR">
             <objects>
-                <viewController id="Fml-Hz-KJG" customClass="WriteDiaryViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteDiaryViewController" id="Fml-Hz-KJG" customClass="WriteDiaryViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2KS-dh-Aiv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,6 +261,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="411" height="80"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="edA-Aj-VGJ" id="rpk-H8-XX7"/>
+                                            <outlet property="titleLabel" destination="6zP-c5-Tyh" id="ow1-mV-9KR"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -275,6 +279,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fJr-JZ-gDK"/>
+                    <connections>
+                        <outlet property="collectionView" destination="sOc-oi-6go" id="tHe-CH-OWO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCt-aI-83P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,7 +363,7 @@
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="tapDeleteButton:" destination="8yK-x5-kHY" eventType="touchUpInside" id="Y0m-Ew-OzO"/>
+                                            <action selector="tapDeleteButton:" destination="8yK-x5-kHY" eventType="touchUpInside" id="J7m-XT-efE"/>
                                         </connections>
                                     </button>
                                 </subviews>

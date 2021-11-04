@@ -26,6 +26,11 @@ class ViewController: UIViewController {
             selector: #selector(editDiaryNotification(_:)),
             name: NSNotification.Name("editDiary"),
             object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification(_:)),
+            name: NSNotification.Name("starDiary"),
+            object: nil)
     }
 
     private func configureCollectionView(){
@@ -43,6 +48,13 @@ class ViewController: UIViewController {
             $0.date.compare($1.date) == .orderedDescending
         })
         self.collectionView.reloadData()
+    }
+    
+    @objc func starDiaryNotification(_ notification: Notification) {
+        guard let starDiary = notification.object as? [String:Any] else {return}
+        guard let isStar = starDiary["isStar"] as? Bool else {return}
+        guard let indexPath = starDiary["indexPath"] as? IndexPath else {return}
+        self.diaryList[indexPath.row].isStar = isStar
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

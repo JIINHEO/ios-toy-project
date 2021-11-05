@@ -31,6 +31,11 @@ class ViewController: UIViewController {
             selector: #selector(starDiaryNotification(_:)),
             name: NSNotification.Name("starDiary"),
             object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(deleteDiaryNotification(_:)),
+            name: NSNotification.Name("deleteDiary"),
+            object: nil)
     }
 
     private func configureCollectionView(){
@@ -55,6 +60,11 @@ class ViewController: UIViewController {
         guard let isStar = starDiary["isStar"] as? Bool else {return}
         guard let indexPath = starDiary["indexPath"] as? IndexPath else {return}
         self.diaryList[indexPath.row].isStar = isStar
+    }
+    @objc func deleteDiaryNotification(_ notification: Notification){
+        guard let indexPath = notification.object as? IndexPath else {return}
+        self.diaryList.remove(at: indexPath.row)
+        self.collectionView.deleteItems(at: [indexPath])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -125,7 +135,6 @@ extension ViewController: UICollectionViewDelegate{
         let diary = self.diaryList[indexPath.row]
         viewController.diary = diary
         viewController.indexPath = indexPath
-        viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -140,12 +149,3 @@ extension ViewController: WriteDiaryViewDelegate {
     }
 }
 
-extension ViewController: DiaryDetailViewDelegate{
-    func didSelectDelete(indexPath: IndexPath) {
-        self.diaryList.remove(at: indexPath.row)
-        self.collectionView.deleteItems(at: [indexPath])
-    }
-    func didSelectStar(indexPath: IndexPath, isStar: Bool) {
-        self.diaryList[indexPath.row].isStar = isStar
-    }
-}

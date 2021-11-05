@@ -11,18 +11,12 @@ enum DiaryEditorMode {
     case new
     case edit(IndexPath, Diary)
 }
-
-protocol DiaryDetailViewDelegate: AnyObject {
-    func didSelectDelete(indexPath: IndexPath)
-    func didSelectStar(indexPath: IndexPath, isStar: Bool)
-}
  
 class DiaryDetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var dateLabel: UILabel!
-    weak var delegate: DiaryDetailViewDelegate?
     var starButton: UIBarButtonItem?
     
     
@@ -75,7 +69,10 @@ class DiaryDetailViewController: UIViewController {
 
     @IBAction func tapDeleteButton(_ sender: UIButton) {
         guard let indexPath = self.indexPath else { return }
-        self.delegate?.didSelectDelete(indexPath: indexPath)
+        NotificationCenter.default.post(
+            name: NSNotification.Name("deleteDiary"),
+            object: indexPath,
+            userInfo: nil)
         self.navigationController?.popViewController(animated: true)
         //삭제 시 전화면으로 이동하게 만듦 
     }
@@ -93,11 +90,11 @@ class DiaryDetailViewController: UIViewController {
         NotificationCenter.default.post(
             name: NSNotification.Name("starDiary"),
             object: [
+                "diary": self.diary,
                 "isStar": self.diary?.isStar ?? false,
                 "indexPath": indexPath
             ],
             userInfo: nil)
-        //self.delegate?.didSelectStar(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
     }
     
     deinit {

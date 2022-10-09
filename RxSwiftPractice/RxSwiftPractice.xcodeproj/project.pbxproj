@@ -27,6 +27,7 @@
 		554ACDF428F298F100A4F9E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		554ACDF628F298F100A4F9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		554ACDFC28F2992B00A4F9E3 /* Observable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		554ACDFD28F2B15100A4F9E3 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6E585AAF23A56B67B6531D7B /* Pods_RxSwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB394289BF681DD56F46338 /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +56,7 @@
 		554ACDDC28F298F000A4F9E3 = {
 			isa = PBXGroup;
 			children = (
+				554ACDFD28F2B15100A4F9E3 /* Traits.playground */,
 				554ACDFC28F2992B00A4F9E3 /* Observable.playground */,
 				554ACDE728F298F000A4F9E3 /* RxSwiftPractice */,
 				554ACDE628F298F000A4F9E3 /* Products */,
